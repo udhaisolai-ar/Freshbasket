@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		FreshBasket
+	</title>
+	<link rel="stylesheet" type="text/css" href="/static/style_productDetail.css">
+</head>
+
+<body>
+	<div class="cont">
+		<div class="nav-bar">
+			<a href="/">
+			<img src="/static/img/c1.png" width="370px">
+			</a>
+				<nav>
+					<ul>
+						<li><a >Home</a></li>
+						<li><a >About Us</a></li>
+						<li><a >Contact</a></li>
+						<li><a> Cart</a></li>
+					</ul>
+				</nav>
+			<a href="/cart"><img src="/static/img/c4.png" width="30px"></a>
+		<h3 id="cart" style="color: red; padding: 10px; margin-top: 46px;">{{session['CartQty']|length}}</h3>
+		</div>
+		<br>
+		<br>
+		<img id="products"src="{{ url_for('static', filename=img) }}">
+		<br>
+			{% with message = get_flashed_messages()%}
+			{%if message%}
+				{% for i in message%}
+					<center><p id="messageflash" style="color: red; font-size: 30px; width:70%;  " >{{i}}</p></center>
+					<br>
+				{%endfor%}
+			{%endif%}
+			{%endwith%}
+			<br>
+			<h1><p>{{value}}</p></h1>
+			<br>
+			<h2><p>{{price}}</p></h2>
+			<br>
+			<br>
+			<div class="txt">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et <br> dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip <br>ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit  in voluptate velit esse
+			cillum dolore eu <br> fugiat nulla pariatur.Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit <br>anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt <br> ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip <br> ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla <br>pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			<!-- </div>	 --><br>
+			</div>
+			<br>
+			<br>
+			<br>
+			<form method="post" action="/Addcart/{{value}}">
+  					<div class="txt2b"><button class="button" >Add To Cart</button></div>
+  			</form>
+
+		<br>	
+		<br>
+		</div>
+		</div>
+		<div class="small-container">
+			<hr>		
+			<STRONG><p>	People who bought this also bought this</p></STRONG>
+			<div class="row">
+				{% for i in range(length)%}
+				{% if i!=3 %}
+				<a href="/products/{{db[i][1]}}">
+				<div class="col">
+					<img src="{{ url_for('static', filename=db[i][3]) }}" width="20%">
+					<H2>{{db[i][1]}}</H2> 
+					<h3>{{db[i][2]}}</h3>
+					<form method="post" action="/Addcart/{{db[i][1]}}">
+					<center><button>Add To Cart</button></center>
+				</form>
+				</div>
+				</a>
+				{% else %}
+				<a href="/products/{{db[i][1]}}">
+				<div class="col">
+					<div class="ribbon">
+					      <span>Trending</span>
+				  	</div>
+					<img src="{{ url_for('static', filename=db[i][3]) }}" width="20%">
+					<H2>{{db[i][1]}}</H2> 
+					<h3>{{db[i][2]}}</h3>
+					<form method="post" action="/Addcart/{{db[i][1]}}">
+					<center><button>Add To Cart</button></center>
+				</form>
+				</div>
+				</a>
+
+				{% endif %}
+				{%endfor%}
+			</div>
+		</div>
+		<br>
+		
+		<br> 
+		<!-- <div>
+			<footer>
+			<p>Copyrights &copy; 2021 Freshbasket.com</p>
+			</footer>
+	</div>
+</body>
+
+</html>

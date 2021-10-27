@@ -1,0 +1,221 @@
+*{
+    font-family: sans-serif;
+    /*margin: 0;*/
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.nav-bar{
+    /*width: 100%;*/
+	display: flex;
+	align-items: center;
+	padding: 05px;
+    background: #E1FFE0;
+    left: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.cont{
+
+    margin: auto;
+        padding-right: 30px;
+    padding-left: 50px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 50px;
+}
+.cont{
+    /*margin-top: 100px;*/
+    max-width: 1500px;
+    /*margin: auto;*/
+    padding-right: 30px;
+    padding-left: 50px;
+}
+.display{
+    /*text-align: center;*/
+    margin-top: 100px;
+}
+h2{
+    margin-left: 0px;
+    padding-bottom: 20px;
+    padding-right: 150px;
+    padding-left: 50px;
+}
+/*.cart_summary{
+    display: inline-flex;
+    border: #E1FFE0 solid;
+}*/
+header,.row {
+  display: flex; 
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+body{
+    position: absolute;
+}
+section{
+      border: #b0ffad  solid;
+      border-radius: 20px;
+      margin-left: 100px;
+      margin-right: 100px;
+      padding-left: 20px;
+}
+header h2{
+    padding-left: 120px;
+}
+.col {
+  flex: 1;       
+}
+.col h2{
+    text-align: center;
+}
+.col img{
+    padding-left: 35px;
+    height: 125px;
+    width: 125px;
+    object-fit: contain;
+    vertical-align: middle;
+
+}
+.col p{
+    padding-left: 180px;
+    padding-top: 30px;
+    /*position: absolute;*/
+}
+strong{
+    display: inline-block;
+    padding-left: 118px;
+    /*margin-top: 100px;*/
+    /*padding-top: 100px;*/
+}
+.payment button{
+    position: relative;
+    /*padding-left: 500px;*/
+    /*padding-right: 600px;*/
+
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: sans-serif;
+    background-color: #1a75ff; 
+    opacity: 0.99;
+    color: black;
+    font-weight: bolder;
+    font-size: 17px;
+    text-align: center;
+    /*border: solid ;*/
+    border-radius: 20px;
+}
+.order button{
+    position: relative;
+    /*padding-left: 500px;*/
+    /*padding-right: 600px;*/
+
+    width: 25%;
+    padding-top: 9px;
+    padding-bottom: 13px;
+    margin-right: 5px;
+    margin-top: 80px;
+    margin-bottom: -8px;
+    font-family: sans-serif;
+    background-color: #1a75ff; 
+    opacity: 0.99;
+    color: black;
+    font-weight: bolder;
+    font-size: 17px;
+    text-align: center;
+    /*border: solid ;*/
+    border-radius: 20px;
+}
+.login_popup{
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%);
+}
+.form_log{
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+}
+input{
+    margin-bottom: 25px;
+    padding: 10px;
+    border: solid 1px black;
+    justify-content: center;
+}
+.close{
+    /*top:0;*/
+    position: absolute;
+    top: 0.5%;
+    left: 93%;
+    font-size: 45px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    /*background-color: yellow;*/
+    color: black;
+}
+.vfy{
+    width: 50%;
+    /*margin-right: 10px;*/
+    display: block;
+    /*padding: 15px;*/
+}
+.login_popup button{
+    background-color:#4caf50;
+    padding: 10px;
+    width: 40%;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.login_popup input{
+    width: 50%;
+    border-radius: 10px;
+    border: 2px #4caf50 solid;
+
+}
+.form_log{
+    border-radius: 20px;
+    border: #4caf50 solid 2px;
+    box-shadow: 0px 0px 15px 15px #4caf50;
+}
+#SubTotal{
+    margin-top: 19px;
+    margin-left: 65%;
+}
+#list{
+    display: none;
+}
+#messageflash{
+    color: green;
+    font-size: 30px;
+    margin-top: -45px;
+}
